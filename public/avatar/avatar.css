@@ -1,0 +1,91 @@
+.selections{
+   display:flex;
+   flex-direction:row;
+   justify-content:center;
+   flex-wrap: nowrap;
+}
+#cont1{
+    height: 11vh;
+    margin-top:7vh;
+    margin-left:2vw;
+}
+#cont2{
+    height: 11vh; 
+}
+#cont3{
+    height: 11vh;
+}
+#cont4{
+    height: 11vh;
+    margin-top:7vh;
+}
+.avatar{
+    display:flex;
+    flex-direction:column;
+    justify-content:center; 
+}
+#armsDefault{
+    margin-top: 35%;
+    margin-left:35%;
+}
+#legsDefault{
+    margin-top: 8%;
+    margin-left:37%;
+}
+#bodyDefault{
+    margin-top: -70%;
+    margin-left:30%;
+}
+#headDefault{
+    margin-top: -140%;
+    margin-left:26%;
+}
+#eyesDefault{
+    margin-top: -140%;
+    margin-left:43%;
+}
+#mouthDefault{
+    width: 6vw;
+    margin-top: -67%;
+    margin-left:50%;
+}
+.categoriesDisp{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    margin-top:1vh;
+}
+#bodyDispCont{
+    height: 15vh;
+    margin-top:24vh;
+    margin-left: 0vw;
+}
+#legDispCont{
+    height: 10vh;
+    margin-top:26.5vh;
+}
+#headDispCont{
+    height: 10vh;
+    margin-top:26.5vh;
+    margin-left:2vw;
+}
+#eyeDispCont{
+    height: 10vh;
+    margin-top:37vh;
+    margin-left:-68vw;
+}
+#mouthDispCont{
+    height: 10vh;
+    margin-top:37vh;
+    margin-left:2vw;
+}
+#armDispCont{
+    height: 10vh;
+    margin-top:37vh;
+    margin-left:2vw;
+}
+#saveAvatarBtn{
+    height: 10vh;
+    margin-top:1vh;
+    margin-left: 40%;
+}

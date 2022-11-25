@@ -10,9 +10,55 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
          <link rel="icon" href="../images/site-mages/browserIcon.png"/>
+         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
          <title>Mi Avatar</title>  
     </head>
+    <header>
+      <div class="w-3padding w3-xlarge w3-text-orange">
+            <a href="../home/home.html"><i class="fa fa-home"></i></a>  
+      </div>      
+    </header> 
     <body>
+        <div class="seletions">
+            <img class="container" id="cont1" src="../images/site-mages/ellipse.png" alt="Contenedor de imágenes.">
+            <img class="container" id="cont2" src="../images/site-mages/ellipse.png" alt="Contenedor de imágenes.">
+            <img class="container" id="cont3" src="../images/site-mages/ellipse.png" alt="Contenedor de imágenes.">
+            <img class="container" id="cont4" src="../images/site-mages/ellipse.png" alt="Contenedor de imágenes.">
+        </div>
+        <div class="avatar">
+            <div class="arms">
+                <img id="armsDefault" src="../images/arms-arr/default.png" alt="brazos predeterminados.">
+            </div>
+            <div class="legs">
+                <img id="legsDefault" src="../images/legs-arr/defadult.png" alt="piernas predeterminados.">
+            </div>
+            <div class="body">
+                <img id="bodyDefault" src="../images/body-arr/default.png" alt="cuerpo predeterminados.">
+            </div>
+            <div class="head">
+                <img id="headDefault" src="../images/head-arr/default.png" alt="cabeza predeterminados.">
+            </div>
+            <div class="eyes">
+                <img id="eyesDefault" src="../images/eyes-arr/default.png" alt="ojos predeterminados.">
+            </div>
+            <div class="mouth"></div>
+            <img id="mouthDefault" src="../images/mouth-arr/default.png" alt="boca predeterminados.">
+        </div>
+
+        <div class="categoriesDisp">
+            <img id="bodyDispCont" src="../images/site-mages/body-display.png" alt="Contenedor para seleccionar el cuerpo.">
+            <img id="legDispCont" src="../images/site-mages/legs-display.png" alt="Contenedor para seleccionar piernas.">
+            <img id="headDispCont" src="../images/site-mages/head-diplay.png" alt="Contenedor para seleccionar la cabeza.">
+            <img id="eyeDispCont" src="../images/site-mages/eyes-display.png" alt="Contenedor para seleccionar los ojos.">
+            <img id="mouthDispCont" src="../images/site-mages/mouth-display.png" alt="Contenedor para seleccionar la boca.">
+            <img id="armDispCont" src="../images/site-mages/arms-display.png" alt="Contenedor para seleccionar los brazos.">
+        </div >
+        <div >
+            <img id="saveAvatarBtn" src="../images/site-mages/checkmark.png" alt="Guardar cambios.">
+        </div>
+
+
         <script type="module" src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
         <script type="module" src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
         <script type="module" src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
