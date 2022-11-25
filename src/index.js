@@ -24,10 +24,10 @@ signUpButton.addEventListener('click', (e) => {
   e.preventDefault();
   console.log('clicked');
 
-  const email = document.getElementById('reg-email');
-  const password = document.getElementById('reg-password');
-  const passConf = document.getElementById('reg-password-2');
-  const username = document.getElementById('name');
+  const email = document.getElementById('reg-email').value;
+  const password = document.getElementById('reg-password').value;
+  const passConf = document.getElementById('reg-password-2').value;
+  const username = document.getElementById('name').value;
 
   if (validateEmail(email) === false){
     alert('Formato de correo inválido.')
@@ -48,21 +48,22 @@ signUpButton.addEventListener('click', (e) => {
   }
 //    Continue authorizing the user
   auth
-    .createUserWithEmailAndPassword(email.value, password.value)
-    .then((userCredential) => {
+    .createUserWithEmailAndPassword(email, password)
+    .then(function(){
 
       window.location.href='/public/login/login.html';
-      const user = userCredential.user;
+      // Declare user variable
+      let user = auth.currentUser;
       // Add user to db
-    const database_ref = database.ref()
+      const database_ref = database.ref()
       //Create User data
       let user_data = {
         username: username,
         email: email,
-        last_login: Date.now()
+        lastLogin: Date.now()
       }
 
-    firebase.database().ref('users/' + user.uid).set(user_data)
+    database_ref.child('users/' + user.uid).set(user_data)
 
     })
     .catch((error) => {
@@ -77,7 +78,7 @@ signUpButton.addEventListener('click', (e) => {
 }
 
 function validateUsername(username){
-    if(username.value <= 0){        
+    if(username <= 0){        
         return false
     } else {
         return true
@@ -86,7 +87,7 @@ function validateUsername(username){
 
 function validateEmail(email){
     let validRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if(email.value.match(validRegex)){ 
+    if(email.match(validRegex)){ 
         return true
     } else {
         return false
@@ -94,14 +95,14 @@ function validateEmail(email){
 }
 
 function validatePass(password){
-    if(password.value < 6){
+    if(password < 6){
         return false
     } else{
         return true
     }
 }
 function comparePass(password, passConf){
-    if(password.value === passConf.value){
+    if(password === passConf){
         return true
     } else {
         return false
@@ -110,24 +111,38 @@ function comparePass(password, passConf){
 
 
 // ----------------->  Sign In <------------------------
-// const signInButton = document.getElementById('subBtn');
+const signInButton = document.getElementById('subBtn');
 
-// signInButton.addEventListener('click', (e)=> {
-//     e.preventDefault();
-//     console.log('clicked');
+if(signInButton){
+signInButton.addEventListener('click', (e)=> {
+    e.preventDefault();
+    console.log('clicked');
 
-//     const email = document.getElementById('login-email');
-//     const password = document.getElementById('login-password')
+    const email = document.getElementById('login-email').value;
+    const password = document.getElementById('login-password').value;
 
-// auth
-// .signInWithEmailAndPassword(auth, email, password)
-//     .then((userCredential) => {
-//         window.location.href='/public/avatar/avatar.html';
-//         const user = userCredential.user;
+    if (validateEmail(email) === false || validatePass(password) === false){
+      alert('Credenciales incorrectas.')
+      return
+    }
+    
+auth
+.signInWithEmailAndPassword(email, password)
+    .then(function(){
+        window.location.href='/public/avatar/avatar.html';
+        let user = auth.currentUser;
+        const database_ref = database.ref()
+        
+        let user_data = {
+        lastLogin: Date.now()
+      }
 
-//     })
-//     .catch((error) => {
-//         const errorCode = error.code;
-//         const errorMessage = error.message;
-//     });
-// });  
+    database_ref.child('users/' + user.uid).update(user_data)
+
+    })
+    .catch(function(error){
+        const errorCode = error.code;
+        const errorMessage = error.message;
+    });
+});  
+}

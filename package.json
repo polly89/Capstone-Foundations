@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/polly89/foundationsCapstopne#readme",
   "dependencies": {
-    "firebase": "^8.2.4"
+    "firebase": "^8.6.8"
   }
 }
