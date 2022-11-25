@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="Inscríbete" content="Sign-up page for page for Mundo Mágico, a Spanish reading program for kids."/>
+        <meta name="keywords" content="sign-up, start, register, learn, education, read, Spanish, kids"/>
+        <meta name="viewport" content="width=device-width, initial-scale=">
+        <link rel="stylesheet" href="./register.css"/> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+         <link rel="icon" href="../images/site-mages/browserIcon.png"/>
+         <title>Inscríbete</title>  
+         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    </head>
+    <body>
+        <header>
+            <div  class="w-3padding w3-xlarge w3-text-white">
+                <a href="../home/home.html"><i class="fa fa-home"></i></a> 
+            </div>     
+        </header>    
+        
+        </div>
+            <div id="sky">
+                
+                <img id="tree" src="../images/site-mages/tree.png" alt="árbol">
+                <img id="logo" src="../images/site-mages/logo.png" alt="Mundo Mágico logo"> 
+                <img id="bush" src="../images/site-mages/bush.png" alt="arbusto">
+                <div class="sun"></div>
+            </div>
+        
+            <!-- <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
+                <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style="stroke: none; fill:#ab7b53;"></path>
+            </svg> -->
+            <!-- <img id="waterfall" src="../images/site-mages/waterfall.png" alt="catarata"> -->
+            <div class="regCont">
+                <form id="reg-form">
+                    <h1>¡Inscríbete!</h1>
+                    <input id="name" class="usericon" type="text" onfocus="this.value=''" placeholder="usuario" name="name" required><br>
+                    <input id="reg-email" class="emailIcon" type="text" onfocus="this.value=''" placeholder="correo" name="email" required><br>
+                    <input id="reg-password" class="pswIcon" type="password" onfocus="this.value=''" placeholder="*********" name="psw" required><br>
+                    <input id="reg-password-2" class="pswIcon" type='password'onfocus="this.value=''" placeholder='confirma tu contraseña.' name="psw2" required/><br>
+                    <input type="checkbox" name="terms" id="terms" onchange="activateButton(this)"> Acepto el Acuerdo de Usuario y la Política de Privacidad
+                    <br><br>
+        
+                    <button class="subBtn" type="submit" name="submit" id="submit">¡Inscríbete!</button><br>
+                    
+                    <span class="existingAccount">¿Ya tienes una cuenta? <a href="../login/login.html">¡Inicia sesión!</a></span>
+                </form>
+                
+            </div>
+            <script type="module" src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+            <script type="module" src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+            <script type="module" src="https://www.gstatic.com/firebasejs/8.2.4/firebase-database.js"></script>
+            <script type="module" src="/src/index.js"></script>
+    </body>
+
+</html>

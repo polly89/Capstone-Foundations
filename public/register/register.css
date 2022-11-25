@@ -1,0 +1,152 @@
+body{
+    background: rgba(155, 208, 105, 0.7);
+}
+header{
+    height: 3vh;
+    background-color: #00ccff;
+}
+#sky{
+    background-color: #00ccff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 15vh;
+    width: 100vw;
+}
+#logo{
+    height: 100%;
+    margin-bottom: -10vh;
+    margin-left: 10vw;
+    z-index: 2;
+}
+#tree{
+    height:50%;
+    margin-bottom: -12vh;
+    z-index: 2;
+}
+#bush{
+    height:30%;
+    margin-bottom: -12vh;
+    margin-right:-40vw;
+    z-index: 2;
+}
+#reg-form{
+    display:flex;
+    flex-direction:column;
+    justify-content:start;
+    align-items: center;
+    height: 50vh;
+    width: 90vw;
+    background: rgba(255, 255, 255, 0.47);
+    border-radius: 25px;
+    font-family: "Nunito", sans-serif;
+    margin-left: 5vw;
+    margin-top: 20vh;
+    z-index: 3;
+}
+h1{
+    align-self: start;
+    text-indent: 5vw;
+    color:#205E76;
+    line-height: 24px;
+    padding: 1vh;
+}
+.emailIcon{
+    background: url("../images/site-mages/email.png");
+    background-position: 10px 5px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-color: white;
+    text-indent: 50px;
+    font-size: 20px;
+    margin-top: 80px;
+}
+.pswIcon{
+    background: url("../images/site-mages/password-icon.png");
+    background-position: 10px 5px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-color: white;
+    text-indent: 50px;
+    font-size: 20px;
+}
+.usericon{
+    background: url("../images/site-mages/usericon.png");
+    background-position: 10px 5px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-color: white;
+    text-indent: 50px;
+    font-size: 20px;
+}
+#reg-email{
+    margin-top: 0vh;
+}
+#reg-email, #reg-password, #reg-password-2, #name{
+    display: flex;
+    justify-content:flex-start;
+    border-radius: 30px;
+    height:30px;
+    width: 300px;
+    border: 1px solid rgba(217, 217, 217, 0.2);
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: "Nunito", sans-serif;
+}
+#submit{
+    display: flex;
+    align-items: center;
+    justify-self:center;
+    border-radius: 30px;
+    height:30px;
+    width: 300px;
+    background-color: #FFA09E;
+    border-color: #FFA09E;
+    color: white;
+    text-indent: 100px;
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+}
+.sun { 
+    display:flex;
+    align-self: flex-start;
+    margin-right: 20vw;
+    margin-top: -2vh;
+      width:70px;
+      height:70px;
+      border-radius:50%;	
+      background:white;
+      opacity:0.9;			
+      box-shadow: 0px 0px 40px 15px white;  
+  }
+
+/* #waterfall{
+    z-index: 0;
+    display: fixed;
+    margin-top: -57vh;
+    height: 100vh;
+    z-index: 1;
+} */
+@media only screen and (min-width:1000px){
+    /*for desktops*/
+    #reg-form{
+    height: 50vh;
+    width: 40vw;
+    margin-left: 30vw;
+    margin-top: 25vh;
+    }
+    #logo{
+    /* width: 30vw; */
+    height: 40vh;
+    margin-left: 10vw;
+    margin-top:10vh;
+    }
+    #tree{
+        width: 20vh;
+        height: 20vh;
+    }
+    #bush{
+        width: 10vw;
+        height: 10vh;
+        margin-right:-40vw;
+    }
+}

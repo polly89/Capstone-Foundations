@@ -1,0 +1,23 @@
+{
+  "name": "foundationscapstone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/polly89/foundationsCapstopne.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/polly89/foundationsCapstopne/issues"
+  },
+  "homepage": "https://github.com/polly89/foundationsCapstopne#readme",
+  "dependencies": {
+    "firebase": "^8.2.4"
+  }
+}
