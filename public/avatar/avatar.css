@@ -1,91 +1,182 @@
+header{
+    text-indent: 2vw;
+}
 .selections{
-   display:flex;
-   flex-direction:row;
-   justify-content:center;
-   flex-wrap: nowrap;
+   display:fixed;
+   margin-left: 50%;
+   transform:translate(-50%,0);
+   height:150px;
+   width: 500px;
 }
 #cont1{
     height: 11vh;
-    margin-top:7vh;
-    margin-left:2vw;
+    margin-top:1vh;
 }
 #cont2{
-    height: 11vh; 
+    height: 11vh;
+    margin-top:-7vh; 
 }
 #cont3{
     height: 11vh;
+    margin-top:-7vh;
 }
 #cont4{
     height: 11vh;
-    margin-top:7vh;
+    margin-top:1vh;
 }
 .avatar{
-    display:flex;
-    flex-direction:column;
-    justify-content:center; 
+    position:fixed;
+    top:15vh;
+    left:50%; 
+    transform:translate(-50%,0);
+    height:400px;
+    width: 300px;
 }
 #armsDefault{
-    margin-top: 35%;
-    margin-left:35%;
+    position:fixed;
+    margin-top: 22vh;
+    left:50%; 
+    transform:translate(-50%,0);
 }
 #legsDefault{
-    margin-top: 8%;
-    margin-left:37%;
+    position:fixed;
+    margin-top: 32vh;
+    left:50%; 
+    transform:translate(-50%,0);
 }
 #bodyDefault{
-    margin-top: -70%;
-    margin-left:30%;
+    position:fixed;
+    margin-top: 12vh;
+    left:50%; 
+    transform:translate(-50%,0);
 }
 #headDefault{
-    margin-top: -140%;
-    margin-left:26%;
+    position:fixed;
+    margin-top: 0vh;
+    left:50%; 
+    transform:translate(-50%,0);
 }
 #eyesDefault{
-    margin-top: -140%;
-    margin-left:43%;
+    position:fixed;
+    margin-top: 12vh;
+    left:52%; 
+    transform:translate(-48%,0);
 }
 #mouthDefault{
-    width: 6vw;
-    margin-top: -67%;
-    margin-left:50%;
+    position:fixed;
+    margin-top: 18vh;
+    left:54%; 
+    transform:translate(-46%,0);
 }
 .categoriesDisp{
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
-    margin-top:1vh;
+    display:fixed;
+    display: row;
+    margin-left: 50%;
+    margin-top:38vh;
+    transform:translate(-50%,0);
+    height:300px;
+    width: 500px;
 }
 #bodyDispCont{
-    height: 15vh;
-    margin-top:24vh;
-    margin-left: 0vw;
+    max-width: 100%;
+    margin-top:-5vh;
+    margin-left: 26%;
+    transform:translate(-74%,0);
 }
 #legDispCont{
-    height: 10vh;
-    margin-top:26.5vh;
+    margin-top:-26vh;
+    max-width: 100%;
+    margin-left: 50%;
+    transform:translate(-50%,0);
 }
 #headDispCont{
-    height: 10vh;
-    margin-top:26.5vh;
-    margin-left:2vw;
+    margin-top:-31vh;
+    max-width: 100%;
+    margin-left: 75%;
+    transform:translate(-25%,0);
 }
 #eyeDispCont{
-    height: 10vh;
-    margin-top:37vh;
-    margin-left:-68vw;
+    margin-top:-8vh;
+    max-width: 100%;
+    margin-left: 75%;
+    transform:translate(-25%,0);
 }
 #mouthDispCont{
-    height: 10vh;
-    margin-top:37vh;
-    margin-left:2vw;
+    max-width: 100%;
+    margin-top:-19vh;
+    max-width: 100%;
+    margin-left: 25%;
+    transform:translate(-75%,0);
 }
 #armDispCont{
-    height: 10vh;
-    margin-top:37vh;
-    margin-left:2vw;
+    max-width: 100%;
+    margin-top:-24vh;
+    max-width: 100%;
+    margin-left: 50%;
+    transform:translate(-50%,0);
 }
 #saveAvatarBtn{
-    height: 10vh;
-    margin-top:1vh;
-    margin-left: 40%;
+    display:fixed;
+    margin-left: 50%;
+    transform:translate(-50%,0);
+    height:80px;
+    width:80px;
+}
+@media only screen and (min-width:1000px){
+    /*for desktops*/
+    header{
+        text-indent: 12vw;
+    }
+    .categoriesDisp{
+        display:fixed;
+        display: row;
+        margin-left: 50%;
+        margin-top:42vh;
+        transform:translate(-50%,0);
+        height:150px;
+        width: 1000px;
+    }
+    #bodyDispCont{
+        max-width: 100%;
+        margin-top:-5vh;
+        margin-left: 10%;
+        transform:translate(-90%,0);
+    }
+    #legDispCont{
+        margin-top:-5vh;
+        max-width: 100%;
+        margin-left: 0%;
+        transform:translate(-100%,0);
+    }
+    #headDispCont{
+        margin-top:-5vh;
+        max-width: 100%;
+        margin-left: 2%;
+        transform:translate(-98%,0);
+    }
+    #eyeDispCont{
+        margin-top:-25vh;
+        max-width: 100%;
+        margin-left: 58%;
+        transform:translate(-42%,0);
+    }
+    #mouthDispCont{
+        max-width: 100%;
+        margin-top:-30vh;
+        margin-left: 75%;
+        transform:translate(-25%,0);
+    }
+    #armDispCont{
+        max-width: 100%;
+        margin-top:-34vh;
+        margin-left: 90%;
+        transform:translate(-10%,0);
+    }
+    #saveAvatarBtn{
+        display:fixed;
+        margin-left: 50%;
+        transform:translate(-50%,0);
+        height:100px;
+        width:100px;
+    }
 }
