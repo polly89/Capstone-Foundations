@@ -1,0 +1,13 @@
+{
+    "body":[{
+        "id":1,
+        "name": "bee",
+        "imgUrl": "../public/images/body-arr/bee.png"
+    },
+    {
+        "id":2,
+        "name": "mermaid",
+        "imgUrl": "../public/images/body-arr/mermaid.png"
+    }    
+    ]
+}

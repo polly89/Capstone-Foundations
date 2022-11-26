@@ -146,3 +146,81 @@ auth
     });
 });  
 }
+// ---------------------> Avatar Builder <---------------------------
+// Category Display 
+const bodySelect = document.querySelector('#bodyDispCont')
+const armSelect = document.querySelector('#armDispCont')
+const legSelect = document.querySelector('#legDispCont')
+const headSelect = document.querySelector('#headDispCont')
+const mouthSelect = document.querySelector('#mouthDispCont')
+const eyeSelect = document.querySelector('#eyeDispCont')
+
+//Containers displaying options within the category selected
+const cont1 = document.querySelector('.cont1')
+const cont2 = document.querySelector('.cont2')
+const cont3 = document.querySelector('.cont3')
+const cont4 = document.querySelector('.cont4')
+
+// Default avatar parts
+
+const bodyDefault = document.querySelector('#bodyDefault')
+const legDefault = document.querySelector('#legsDefault')
+const headDefault = document.querySelector('#headDefault')
+const eyeDefault = document.querySelector('#eyesDefault')
+const mouthDefault = document.querySelector('#mouthDefault')
+const armDefault = document.querySelector('#armsDefault')
+
+// Avatar pieces for replacement
+const body1 = src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/mermaid.png"
+const body2 = src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/sweater.png"
+const body3 = src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/bee.png"
+const bod4 = src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/spots.png"
+
+// JS to make the selections appear
+bodySelect.addEventListener('click', () => {
+    bodySelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/selectedBodDisplay.png"
+    cont1.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/body-selection-1.png"
+    cont2.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/body-selection-2.png"
+    cont3.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/body-selection-3.png"
+    cont4.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/body-selection-4.png"
+})
+
+bodyDefault.addEventListener('click', () =>{
+  bodyDefault
+})
+
+armSelect.addEventListener('click', () => {
+  armSelect.src = ""
+  cont1.src = ""
+  cont2.src = ""
+  cont3.src = ""
+  cont4.src = ""
+})
+legSelect.addEventListener('click', () => {
+  legSelect.src = ""
+  cont1.src = ""
+  cont2.src = ""
+  cont3.src = ""
+  cont4.src = ""
+})
+headSelect.addEventListener('click', () => {
+  headSelect.src = ""
+  cont1.src = ""
+  cont2.src = ""
+  cont3.src = ""
+  cont4.src = ""
+})
+eyeSelect.addEventListener('click', () => {
+  eyeSelect.src = ""
+  cont1.src = ""
+  cont2.src = ""
+  cont3.src = ""
+  cont4.src = ""
+})
+mouthSelect.addEventListener('click', () => {
+  mouthSelect.src = ""
+  cont1.src = ""
+  cont2.src = ""
+  cont3.src = ""
+  cont4.src = ""
+})

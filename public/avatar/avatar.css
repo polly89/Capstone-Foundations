@@ -8,19 +8,19 @@ header{
    height:150px;
    width: 500px;
 }
-#cont1{
+.cont1{
     height: 11vh;
     margin-top:1vh;
 }
-#cont2{
+.cont2{
     height: 11vh;
     margin-top:-7vh; 
 }
-#cont3{
+.cont3{
     height: 11vh;
     margin-top:-7vh;
 }
-#cont4{
+.cont4{
     height: 11vh;
     margin-top:1vh;
 }
