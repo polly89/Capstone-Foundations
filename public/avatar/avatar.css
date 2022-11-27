@@ -79,7 +79,7 @@ header{
 }
 #bodyDispCont{
     max-width: 100%;
-    margin-top:-5vh;
+    margin-top:-3vh;
     margin-left: 26%;
     transform:translate(-74%,0);
 }
@@ -121,6 +121,7 @@ header{
     transform:translate(-50%,0);
     height:80px;
     width:80px;
+    margin-top: 1vh;
 }
 @media only screen and (min-width:1000px){
     /*for desktops*/

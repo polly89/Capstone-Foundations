@@ -147,7 +147,8 @@ auth
 });  
 }
 // ---------------------> Avatar Builder <---------------------------
-// Category Display 
+// Queries:
+// #1 Category Display (circles at the bottom of the screen)
 const bodySelect = document.querySelector('#bodyDispCont')
 const armSelect = document.querySelector('#armDispCont')
 const legSelect = document.querySelector('#legDispCont')
@@ -155,72 +156,116 @@ const headSelect = document.querySelector('#headDispCont')
 const mouthSelect = document.querySelector('#mouthDispCont')
 const eyeSelect = document.querySelector('#eyeDispCont')
 
-//Containers displaying options within the category selected
+// #2Containers displaying options within the category selected (circles at the top of the screen)
 const cont1 = document.querySelector('.cont1')
 const cont2 = document.querySelector('.cont2')
 const cont3 = document.querySelector('.cont3')
 const cont4 = document.querySelector('.cont4')
 
-// Default avatar parts
-
+// #3 Default part displayed on the avatar. 
 const bodyDefault = document.querySelector('#bodyDefault')
 const legDefault = document.querySelector('#legsDefault')
 const headDefault = document.querySelector('#headDefault')
 const eyeDefault = document.querySelector('#eyesDefault')
 const mouthDefault = document.querySelector('#mouthDefault')
-const armDefault = document.querySelector('#armsDefault')
+const armDefault = document.querySelector('#armsDefault')                 
 
-// Avatar pieces for replacement
-const body1 = src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/mermaid.png"
-const body2 = src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/sweater.png"
-const body3 = src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/bee.png"
-const bod4 = src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/spots.png"
-
-// JS to make the selections appear
-bodySelect.addEventListener('click', () => {
-    bodySelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/selectedBodDisplay.png"
-    cont1.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/body-selection-1.png"
-    cont2.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/body-selection-2.png"
-    cont3.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/body-selection-3.png"
-    cont4.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/body-selection-4.png"
+// JS to make the selections appear:
+    // #1 BODY
+    bodySelect.addEventListener('click', () => {
+      // Changes background color to show the category selected. 
+      bodySelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/selectedBodDisplay.png"
+        // Displays the options within that category.
+        cont1.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/body-selection-1.png"
+        cont2.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/body-selection-2.png"
+        cont3.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/body-selection-3.png"
+        cont4.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/body-selection-4.png"
+        // // Resets the background color for inactive categories. 
+        legSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/legs-display.png"
+        headSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/head-diplay.png"
+        mouthSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/head-diplay.png"
+        armSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/arms-display.png"
+        eyeSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/eyes-display.png"
 })
 
-bodyDefault.addEventListener('click', () =>{
-  bodyDefault
-})
+            // Display selection and adjust location if needed. 
+                cont1.addEventListener('click', () =>{
+  bodyDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/mermaid.png"
+  bodyDefault.style.marginTop = '20vh'
+  console.log('test')
+                })
+                cont2.addEventListener('click', () =>{
+                  bodyDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/sweater.png"
+                  bodyDefault.style.marginTop = '20vh'
+                })
+                cont3.addEventListener('click', () =>{
+                  bodyDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/bee.png"
+                  bodyDefault.style.marginTop = '20vh'
+                })
+                cont4.addEventListener('click', () =>{
+                  bodyDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/spots.png"
+                  bodyDefault.style.marginTop = '20vh'
+                })
+    // #2 LEGS
+    legSelect.addEventListener('click', () => {
+      // Changes background color to show the category selected. 
+      legSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/selectedLegsDisplay.png"
+      // Displays the options within that category.
+      cont1.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/leg-selection-1.png"
+      cont2.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/leg-selection-2.png"
+      cont3.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/leg-selection-3.png"
+      cont4.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/leg-slection-4.png"
+      // Resets the background color for inactive categories. 
+      bodySelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/body-display.png"
+      headSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/head-diplay.png"
+      mouthSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/head-diplay.png"
+      mouthSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/mouth-display.png"
+      armSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/arms-display.png"
+      eyeSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/eyes-display.png"
+    
+    })
 
-armSelect.addEventListener('click', () => {
-  armSelect.src = ""
-  cont1.src = ""
-  cont2.src = ""
-  cont3.src = ""
-  cont4.src = ""
-})
-legSelect.addEventListener('click', () => {
-  legSelect.src = ""
-  cont1.src = ""
-  cont2.src = ""
-  cont3.src = ""
-  cont4.src = ""
-})
-headSelect.addEventListener('click', () => {
-  headSelect.src = ""
-  cont1.src = ""
-  cont2.src = ""
-  cont3.src = ""
-  cont4.src = ""
-})
-eyeSelect.addEventListener('click', () => {
-  eyeSelect.src = ""
-  cont1.src = ""
-  cont2.src = ""
-  cont3.src = ""
-  cont4.src = ""
-})
-mouthSelect.addEventListener('click', () => {
-  mouthSelect.src = ""
-  cont1.src = ""
-  cont2.src = ""
-  cont3.src = ""
-  cont4.src = ""
-})
+                  cont1.addEventListener('click', () =>{
+                    legDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/alian.png"
+                  })
+                  cont2.addEventListener('click', () =>{
+                    legDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/furry.png"
+                  })
+                  cont3.addEventListener('click', () =>{
+                    legDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/elf.png"
+                  })
+                  cont4.addEventListener('click', () =>{
+                    legDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/ribbon.png"
+                  })
+    // #3 ARMS
+    // armSelect.addEventListener('click', () => {
+    //   armSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/arms.png"
+    //   cont1.src = ""
+    //   cont2.src = ""
+    //   cont3.src = ""
+    //   cont4.src = ""
+    // })
+
+    // #4 HEAD
+    // headSelect.addEventListener('click', () => {
+    //   headSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/head.png"
+    //   cont1.src = ""
+    //   cont2.src = ""
+    //   cont3.src = ""
+    //   cont4.src = ""
+    // })
+    // #5 EYES
+    // eyeSelect.addEventListener('click', () => {
+    //   eyeSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/selectedEyesDisplay.png"
+    //   cont1.src = ""
+    //   cont2.src = ""
+    //   cont3.src = ""
+    //   cont4.src = ""
+    // })
+    // mouthSelect.addEventListener('click', () => {
+    //   mouthSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/selectedMouthDisplay.png"
+    //   cont1.src = ""
+    //   cont2.src = ""
+    //   cont3.src = ""
+    //   cont4.src = ""
+    // })
