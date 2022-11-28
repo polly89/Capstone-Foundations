@@ -147,6 +147,8 @@ auth
 });  
 }
 // ---------------------> Avatar Builder <---------------------------
+
+const arrImages = "./db.json"
 // Queries:
 // #1 Category Display (circles at the bottom of the screen)
 const bodySelect = document.querySelector('#bodyDispCont')
