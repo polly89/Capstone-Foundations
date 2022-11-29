@@ -76,7 +76,7 @@ body{
   align-self: left;
   margin-left: -40vw;
   margin-top: -10vh;
-  z-index: 2;
+  z-index: -2;
 }
 #sand{
   /* justify-content:end;
