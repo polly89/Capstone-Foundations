@@ -52,7 +52,7 @@ h1{
     padding: 1vh;
 }
 .emailIcon{
-    background: url("../images/site-mages/email.png");
+    background: url("https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/email.png");
     background-position: 10px 5px;
     background-size: 20px;
     background-repeat: no-repeat;
@@ -62,7 +62,7 @@ h1{
     margin-top: 80px;
 }
 .pswIcon{
-    background: url("../images/site-mages/password-icon.png");
+    background: url("https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/password-icon.png");
     background-position: 10px 5px;
     background-size: 20px;
     background-repeat: no-repeat;
@@ -71,7 +71,7 @@ h1{
     font-size: 20px;
 }
 .usericon{
-    background: url("../images/site-mages/usericon.png");
+    background: url("https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/usericon.png");
     background-position: 10px 5px;
     background-size: 20px;
     background-repeat: no-repeat;
