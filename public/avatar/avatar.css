@@ -123,10 +123,13 @@ header{
     width:80px;
     margin-top: 1vh;
 }
+.savedAvatar{
+    margin-left: -30%;
+}
 @media only screen and (min-width:1000px){
     /*for desktops*/
     header{
-        text-indent: 12vw;
+        text-indent: 2vw;
     }
     .categoriesDisp{
         display:fixed;
@@ -179,5 +182,9 @@ header{
         transform:translate(-50%,0);
         height:100px;
         width:100px;
+    }
+    .savedAvatar{
+        margin-left: -8%;
+        background-color: transparent;
     }
 }

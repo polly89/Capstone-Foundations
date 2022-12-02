@@ -20,7 +20,7 @@ const database = firebase.database();
 const signUpButton = document.getElementById('submit');
 
 if(signUpButton){
-signUpButton.addEventListener('click', (e) => {
+signUpButton.addEventListener('click', async (e) => {
   e.preventDefault();
   console.log('clicked');
 
@@ -46,14 +46,24 @@ signUpButton.addEventListener('click', (e) => {
     alert('Introduzca un nombre de usuario.');
     return
   }
+  
 //    Continue authorizing the user
-  auth
+const {user} = await auth
     .createUserWithEmailAndPassword(email, password)
-    .then(function(){
-
+    .catch((error) => {
+      console.log('removing the catch')
+      // const errorCode = error.code;
+      // const errorMessage = error.message;
+      // console.log('error code', errorCode);
+      // console.log('error Message', errorMessage);
+    
+      alert(errorMessage)
+    });
+    let test = {random: 'hello'}
+    firebase.database().ref('test/' + 'sdfsdfsdfsdf').set(test)
       window.location.href='/public/login/login.html';
+      
       // Declare user variable
-      let user = auth.currentUser;
       // Add user to db
       const database_ref = database.ref()
       //Create User data
@@ -62,18 +72,9 @@ signUpButton.addEventListener('click', (e) => {
         email: email,
         lastLogin: Date.now()
       }
-
-    database_ref.child('users/' + user.uid).set(user_data)
-
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.log('error code', errorCode);
-      console.log('error Message', errorMessage);
     
-      alert(errorMessage)
-    });
+    database_ref.child('users/' + user.uid).set(user_data)
+    console.log(database_ref.child)
 });
 }
 
@@ -114,7 +115,7 @@ function comparePass(password, passConf){
 const signInButton = document.getElementById('subBtn');
 
 if(signInButton){
-signInButton.addEventListener('click', (e)=> {
+signInButton.addEventListener('click', async (e)=> {
     e.preventDefault();
     console.log('clicked');
 
@@ -125,24 +126,22 @@ signInButton.addEventListener('click', (e)=> {
       alert('Credenciales incorrectas.')
       return
     }
-    
-auth
+    console.log('hello')
+const {user} = await auth
 .signInWithEmailAndPassword(email, password)
-    .then(function(){
-        window.location.href='/public/avatar/avatar.html';
-        let user = auth.currentUser;
+    .catch(function(error){
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log({errorMessage, errorCode})
+    });
+    setTimeout(()=> {
+    window.location.href='/public/avatar/avatar.html';
         const database_ref = database.ref()
         
         let user_data = {
         lastLogin: Date.now()
       }
-
     database_ref.child('users/' + user.uid).update(user_data)
-
-    })
-    .catch(function(error){
-        const errorCode = error.code;
-        const errorMessage = error.message;
-    });
+    },0)
 });  
 }

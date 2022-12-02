@@ -12,6 +12,9 @@
          <link rel="icon" href="https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/browserIcon.png"/>
          <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" 
+        integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
          <title>Mi Avatar</title>  
     </head>
     <header>
@@ -27,12 +30,12 @@
             <img class="cont4"  src="https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/ellipse.png" alt="Contenedor de imágenes.">
         </div>
         <div class="avatar">
-            <img id="armsDefault" src="https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/default-a.png" alt="brazos predeterminados.">
-            <img id="legsDefault" src="https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/defadult.png" alt="piernas predeterminados.">
-            <img id="bodyDefault" src="https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/default.png" alt="cuerpo predeterminados.">
-            <img id="headDefault" src="https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/default-h.png" alt="cabeza predeterminados.">
-            <img id="eyesDefault" src="https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/default-e.png" alt="ojos predeterminados.">
-            <img id="mouthDefault" src="https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/default-m.png" alt="boca predeterminados.">
+            <img id="armsDefault" src="avatarImages/default-a.png" alt="brazos predeterminados.">
+            <img id="legsDefault" src="avatarImages/defadult-l.png" alt="piernas predeterminados.">
+            <img id="bodyDefault" src="avatarImages/default-b.png" alt="cuerpo predeterminados.">
+            <img id="headDefault" src="avatarImages/default-h.png" alt="cabeza predeterminados.">
+            <img id="eyesDefault" src="avatarImages/default-e.png" alt="ojos predeterminados.">
+            <img id="mouthDefault" src="avatarImages/default-m.png" alt="boca predeterminados.">
         </div>
 
         <div class="categoriesDisp">
@@ -47,8 +50,7 @@
         <div >
             <img id="saveAvatarBtn" src="https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/checkmark.png" alt="Guardar cambios.">
         </div>
-
-
+        
         <script type="module" src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
         <script type="module" src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
         <script type="module" src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>

@@ -1,3 +1,22 @@
+const firebaseConfig = {
+  apiKey: "AIzaSyCGfEQ0jugSapk1zcVO-UMwCExJG8MGZ1c",
+  authDomain: "mundo-magico-2c2f0.firebaseapp.com",
+  databaseURL: "https://mundo-magico-2c2f0-default-rtdb.firebaseio.com",
+  projectId: "mundo-magico-2c2f0",
+  storageBucket: "mundo-magico-2c2f0.appspot.com",
+  messagingSenderId: "44922031724",
+  appId: "1:44922031724:web:e5f65938b8d2f6d1c69249",
+  measurementId: "G-TMTG9ZVB9K"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+// Initialize Variables
+const auth = firebase.auth();
+const database = firebase.database();
+
+
 // ---------------------> Avatar Builder <---------------------------
 // Queries:
 // #1 Category Display (circles at the bottom of the screen)
@@ -7,6 +26,8 @@ const legSelect = document.querySelector('#legDispCont')
 const headSelect = document.querySelector('#headDispCont')
 const mouthSelect = document.querySelector('#mouthDispCont')
 const eyeSelect = document.querySelector('#eyeDispCont')
+const saveAvatar = document.querySelector('#saveAvatarBtn')
+const avatar = document.querySelector('.avatar')
 
 // #2Containers displaying options within the category selected (circles at the top of the screen)
 const cont1 = document.querySelector('.cont1')
@@ -155,7 +176,7 @@ let currentSelection = ''
                   } else if(currentSelection === 'legs'){
                     legDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/furry.png"
                   } else if ( currentSelection === 'arms'){
-                    armDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/bat.png"
+                    armDefault.src = "bat.png"
                   }else if (currentSelection === 'head'){
                     headDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/girl.png"
                   }else if (currentSelection === 'eye'){
@@ -170,7 +191,7 @@ let currentSelection = ''
                     bodyDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/bee.png"
                   bodyDefault.style.marginTop = '20vh'
                   } else if (currentSelection === 'legs'){
-                    legDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/elf.png"
+                    legDefault.src = "elf.png"
                   } else if ( currentSelection === 'arms'){
                     armDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/ribbon.png"
                     armDefault.style.marginTop = '17.5vh'
@@ -200,8 +221,13 @@ let currentSelection = ''
                   }
                 })
   
-              
-    
-
-                  
-
+// Save Avatar
+saveAvatar.addEventListener('click', () =>{
+  document.querySelector('.avatar').classList.add('savedAvatar')
+  html2canvas(document.querySelector('.avatar')) 
+  .then(canvas => {
+  let savedAvatar = canvas.toDataURL()
+  console.log(savedAvatar)
+  document.querySelector('.avatar').classList.remove('savedAvatar')
+})
+})
