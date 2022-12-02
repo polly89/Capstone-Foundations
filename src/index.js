@@ -126,7 +126,6 @@ signInButton.addEventListener('click', async (e)=> {
       alert('Credenciales incorrectas.')
       return
     }
-    console.log('hello')
 const {user} = await auth
 .signInWithEmailAndPassword(email, password)
     .catch(function(error){

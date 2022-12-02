@@ -27,7 +27,7 @@ const headSelect = document.querySelector('#headDispCont')
 const mouthSelect = document.querySelector('#mouthDispCont')
 const eyeSelect = document.querySelector('#eyeDispCont')
 const saveAvatar = document.querySelector('#saveAvatarBtn')
-const avatar = document.querySelector('.avatar')
+const avatar = document.querySelector('.avatar')// Save Avatar
 
 // #2Containers displaying options within the category selected (circles at the top of the screen)
 const cont1 = document.querySelector('.cont1')
@@ -57,7 +57,7 @@ let currentSelection = ''
         // // Resets the background color for inactive categories. 
         legSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/legs-display.png"
         headSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/head-diplay.png"
-        mouthSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/head-diplay.png"
+        mouthSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/mouth-display.png"
         armSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/arms-display.png"
         eyeSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/eyes-display.png"
         
@@ -138,7 +138,7 @@ let currentSelection = ''
       mouthSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/selectedMouthDisplay.png"
       cont1.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/mouth-selection-1.png"
       cont2.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/mouth-selection-2.png"
-      cont3.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/mouth-selection-3.png"
+      cont3.src = "avatarImages/smirk-selection.png"
       cont4.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/mouth-selection-4.png"
 
       headSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/head-diplay.png"
@@ -152,82 +152,96 @@ let currentSelection = ''
             // Display selection and adjust location if needed. 
                 cont1.addEventListener('click', () =>{
                   if(currentSelection === 'body'){
-                      bodyDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/mermaid.png"
+                      bodyDefault.src = "avatarImages/mermaid-bod.png"
                       bodyDefault.style.marginTop = '20vh'
                   } else if (currentSelection === 'legs'){
-                      legDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/alian.png"
+                      legDefault.src = "avatarImages/alian-feet.png"
                   } else if (currentSelection === 'arms'){
-                      armDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/dance.png"
-                      armDefault.style.marginTop = '20vh'
-                      armDefault.style.marginLeft = '3vh'
+                      armDefault.src = "avatarImages/elf-hands.png"
                   } else if (currentSelection === 'head'){
-                    headDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/hippo.png"
+                    headDefault.src = "avatarImages/hippo-head.png"
                     headDefault.style.marginTop = '0vh'
                   } else if (currentSelection === 'eye'){
-                    eyeDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/wink.png"
+                    eyeDefault.src = "avatarImages/wink.png"
                   } else if (currentSelection = 'mouth'){
-                    mouthDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/line.png"
+                    mouthDefault.src = "avatarImages/line-smile.png"
                   }
               })
                 cont2.addEventListener('click', () =>{
                   if(currentSelection === 'body'){
-                    bodyDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/sweater.png"
+                    bodyDefault.src = "avatarImages/sweater-bod.png"
                     bodyDefault.style.marginTop = '20vh'
                   } else if(currentSelection === 'legs'){
-                    legDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/furry.png"
+                    legDefault.src = "avatarImages/furry-feet.png"
                   } else if ( currentSelection === 'arms'){
-                    armDefault.src = "bat.png"
+                    armDefault.src = "avatarImages/bat.png"
                   }else if (currentSelection === 'head'){
-                    headDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/girl.png"
+                    headDefault.src = "avatarImages/girl-head.png"
                   }else if (currentSelection === 'eye'){
-                    eyeDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/shy.png"
+                    eyeDefault.src = "avatarImages/shy-eyes.png"
                   }else if (currentSelection = 'mouth'){
-                    mouthDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/beak.png"
+                    mouthDefault.src = "avatarImages/beak.png"
                   }
               })
                   
                 cont3.addEventListener('click', () =>{
                   if(currentSelection === 'body'){
-                    bodyDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/bee.png"
+                    bodyDefault.src = "avatarImages/bee-bod.png"
                   bodyDefault.style.marginTop = '20vh'
                   } else if (currentSelection === 'legs'){
-                    legDefault.src = "elf.png"
+                    legDefault.src = "avatarImages/elf.png"
                   } else if ( currentSelection === 'arms'){
-                    armDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/ribbon.png"
+                    armDefault.src = "avatarImages/ribbon-ars.png"
                     armDefault.style.marginTop = '17.5vh'
                   }else if (currentSelection === 'head'){
-                    headDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/boy.png"
+                    headDefault.src = "avatarImages/boy-head-2.png"
                   }else if (currentSelection === 'eye'){
-                    eyeDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/rackoon.png"
+                    eyeDefault.src = "avatarImages/rackoon-eyes.png"
                   }else if (currentSelection = 'mouth'){
-                    mouthDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/triangle.png"
+                    mouthDefault.src = "avatarImages/smirk.png"
                   }
                 })
                 cont4.addEventListener('click', () =>{
                   if(currentSelection === 'body'){
-                    bodyDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/spots.png"
+                    bodyDefault.src = "avatarImages/spots-bod.png"
                     bodyDefault.style.marginTop = '20vh'
                   } else if( currentSelection === 'legs'){
-                    legDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/ribbon-l.png"
+                    legDefault.src = "avatarImages/ribbon-l.png"
                   } else if ( currentSelection === 'arms'){
-                    armDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/monster.png"
-                    armDefault.style.marginTop = '15vh'
+                    armDefault.src = "avatarImages/monster-arms.png"
                   }else if (currentSelection === 'head'){
-                    headDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/bunny.png"
+                    headDefault.src = "avatarImages/bunny-head.png"
                   }else if (currentSelection === 'eye'){
-                    eyeDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/laugh.png"
+                    eyeDefault.src = "avatarImages/laugh.png"
                   }else if (currentSelection = 'mouth'){
-                    mouthDefault.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/cheesy.png"
+                    mouthDefault.src = "avatarImages/cheesy.png"
                   }
                 })
   
-// Save Avatar
-saveAvatar.addEventListener('click', () =>{
-  document.querySelector('.avatar').classList.add('savedAvatar')
-  html2canvas(document.querySelector('.avatar')) 
-  .then(canvas => {
-  let savedAvatar = canvas.toDataURL()
-  console.log(savedAvatar)
-  document.querySelector('.avatar').classList.remove('savedAvatar')
+
+
+if(saveAvatar){
+  saveAvatar.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log("saved button clicked");
+
+    document.querySelector('.avatar').classList.add('savedAvatar')
+    html2canvas(document.querySelector('.avatar')) 
+
+    .then(canvas => {
+    let savedAvatar = canvas.toDataURL()
+    console.log(savedAvatar)
+    // // window.location.href='/public/map/map.html';
+    //     const database_ref = database.ref()
+
+    //     let user_data = {
+    //     avatar: saveAvatar,
+    //     lastLogin: Date.now()
+    //   }
+        
+    // database_ref.child('users/' + user.uid).push().key()
+
+    document.querySelector('.avatar').classList.remove('savedAvatar')
 })
 })
+}
