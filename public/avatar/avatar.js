@@ -231,17 +231,20 @@ if(saveAvatar){
     .then(canvas => {
     let savedAvatar = canvas.toDataURL()
     console.log(savedAvatar)
-    // // window.location.href='/public/map/map.html';
-    //     const database_ref = database.ref()
-
-    //     let user_data = {
-    //     avatar: saveAvatar,
-    //     lastLogin: Date.now()
-    //   }
+        const database_ref = database.ref()
+        let user_data = {
+        avatar: 'saveAvatar',
+        lastLogin: Date.now()
+      }
         
-    // database_ref.child('users/' + user.uid).push().key()
-
+    database_ref.child('users/' + user.uid).push().key()
+    
     document.querySelector('.avatar').classList.remove('savedAvatar')
+    auth.signOut().then(function() {
+      console.log('Signed Out');
+    }, function(error) {
+      console.error('Sign Out Error', error);
+    });
 })
 })
 }
