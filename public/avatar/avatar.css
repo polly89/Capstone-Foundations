@@ -3,8 +3,8 @@ header{
 }
 .selections{
    display:fixed;
-   margin-left: 50%;
-   transform:translate(-50%,0);
+   margin-left: 60%;
+   transform:translate(-40%,0);
    height:150px;
    width: 500px;
 }
@@ -71,9 +71,9 @@ header{
 .categoriesDisp{
     display:fixed;
     display: row;
-    margin-left: 50%;
-    margin-top:38vh;
-    transform:translate(-50%,0);
+    margin-left: 55%;
+    margin-top:35vh;
+    transform:translate(-45%,0);
     height:300px;
     width: 500px;
 }
@@ -117,11 +117,12 @@ header{
 }
 #saveAvatarBtn{
     display:fixed;
-    margin-left: 50%;
-    transform:translate(-50%,0);
+    margin-left: 60%;
+    transform:translate(-40%,0);
+    padding-top: 1vh;
     height:80px;
     width:80px;
-    margin-top: 1vh;
+    margin-top: 3vh;
 }
 .savedAvatar{
     margin-left: -30%;
@@ -131,6 +132,13 @@ header{
     header{
         text-indent: 2vw;
     }
+    .selections{
+        display:fixed;
+        margin-left: 50%;
+        transform:translate(-50%,0);
+        height:150px;
+        width: 500px;
+     }
     .categoriesDisp{
         display:fixed;
         display: row;

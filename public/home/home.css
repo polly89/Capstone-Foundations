@@ -1,7 +1,6 @@
 body{
     margin:0px;
     padding:0px;
-    background-image: linear-gradient(0deg, #00ccff, #62d4d4);
     font-family: "Nunito", sans-serif;
 }
 #donationBar{
@@ -62,33 +61,37 @@ body{
 #cta{
    display:flex;
    flex-direction:column;
-   justify-content:start;
+   justify-content:flex-end;
    align-items: center;
    font-family: "Nunito", sans-serif;
    text-align: center;
    color: white;
   font-size: 1.5vh;
   z-index: 3;
+  padding-top: 15%;
 }
 #sub{
-  width: 90vh;
+  width: 90vw;
   transform: rotate(5deg);
   align-self: left;
-  margin-left: -40vw;
-  margin-top: -10vh;
+  margin-left: -10vw;
+  margin-top: 2vh;
   z-index: -2;
 }
 #sand{
-  /* justify-content:end;
-  margin-bottom: 0px; */
-  width: 100vw;
+  justify-content:end;
+  margin-left:5%;
+  align-self: start;
+  padding-top:8vh;
+  width: 90vw;
   z-index: 4;
 }
-
 #book{
   width: 30vw;
   z-index: 5;
-  margin-bottom: -80px;
+  margin-bottom: -90px;
+  padding-top: 5vh;
+  margin-left:4%;
 }
 #ctaText{ 
   bottom: 25vh;
@@ -108,9 +111,107 @@ body{
 #ocean {
     position: relative;
     width: 100vw;
+    background-color:#00ccff;
   }
 
-/* ANIMATIONS inspired by Cody Pearce on codepen*/
+  @media only screen and (max-width: 700px){
+  /*for mobile devices*/
+  #desktopDonation {
+    display: none;
+ }
+ #signUpBtn{
+  display: none;
+  }
+#signUpBtn{
+    display: none;
+  }
+  #cta{
+    padding-top: 4%;
+    padding-bottom: 0%;
+   }
+}
+@media only screen and (min-width:701px){
+  #cta{
+    margin-top: 40vh;
+   }
+   #sub{
+    width: 50vw;
+    z-index: -2;
+  }
+  #sand{
+    padding-top:5vh;
+    align-self: center;
+    width: 30vw;
+    z-index: 4;
+  }
+  #book{
+    padding-top:10vh;
+    width: 20vw;
+    z-index: 5;
+  }
+  #ctaText{ 
+    margin-top: 20vh;
+  }
+  #ctaBtn{
+    height: 8vh;
+    width: 15vw;
+  }
+}
+@media only screen and (min-width:1168px){
+  /*for desktops*/
+  #donationBar{
+    justify-content:space-between;
+  }
+  #desktopDonation {
+  text-indent: 2vw;
+  }
+  #donateBtn{
+    width: 10vw;
+  }
+  #signInBtn{
+    width: 10vw;
+  }
+  #signUpBtn{
+    width: 150px;
+  }
+  #logo{
+    width: 30vw;
+    margin-right: 15vw;
+  }
+  #cta{
+   padding-top: 10%;
+   padding-bottom: 0%;
+  }
+ #sub{
+   width: 50vw;
+   transform: rotate(5deg);
+   align-self: left;
+   margin-left: -40vw;
+   margin-top: -80vh;
+   z-index: -2;
+ }
+ #sand{
+   justify-content:center;
+   margin-bottom: 0vh;
+   margin-top:-25vh;
+   align-self: center;
+   width: 30vw;
+   z-index: 4;
+ }
+ 
+ #book{
+   width: 20vw;
+   z-index: 5;
+   margin-bottom: 5vh;
+ }
+ #ctaText{ 
+   margin-top: -60vh;
+ }
+ #ctaBtn{
+   height: 8vh;
+   width: 15vw;
+ }
+  /* ANIMATIONS inspired by Cody Pearce on codepen*/
 .bubble {
     width: 30px;
     height: 30px;
@@ -241,38 +342,5 @@ body{
     animation-delay: -10.5s;
     animation-duration: 19s;
     opacity: 0.3;
-  }
-  @media only screen and (max-width: 999px){
-  /*for mobile devices*/
-  #desktopDonation {
-    display: none;
- }
- #signUpBtn{
-  display: none;
-  }
-#signUpBtn{
-    display: none;
-  }
-}
-@media only screen and (min-width:1000px){
-  /*for desktops*/
-  #donationBar{
-    justify-content:space-between;
-  }
-  #desktopDonation {
-  text-indent: 2vw;
-  }
-  #donateBtn{
-    width: 10vw;
-  }
-  #signInBtn{
-    width: 10vw;
-  }
-  #signUpBtn{
-    width: 150px;
-  }
-  #logo{
-    width: 30vw;
-    margin-right: 15vw;
   }
 }
