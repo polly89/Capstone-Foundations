@@ -16,42 +16,24 @@ const firebaseConfig = {
   const auth = firebase.auth();
   const database = firebase.database();
 
-  // // ------------------> Display Avatar on Map -- [POST MVP] <--------------------
-// const displayAvatar = document.querySelector('#returnedAvatar')
+  // // ------------------> Display Avatar on Map  <--------------------
+  const displayAvatar = document.querySelector('#returnedAvatar');
 
-// window.addEventListener("load", (event) => {
-//   console.log("page is fully loaded");
-
-//   const dbRef = firebase.database().ref();
-//   dbRef.child('users/').child(user.uid).get().then((snapshot) => {
-//     if (snapshot.exists()) {
-//       console.log(snapshot.val());
-//     } else {
-//       console.log("No data available");
-//     }
-//   }).catch((error) => {
-//     console.error(error);
-//   });
-  
-// });
-
-// Option 2 Syntax
-// const displayAvatar = document.querySelector('#returnedAvatar')
-
-// window.addEventListener("load", (event) => {
-//   console.log("page is fully loaded");
-
-// const user = firebase.auth().currentUser;
-// if (user !== null) {
-//   // The user object has basic properties such as display name, email, etc.
-//   const displayUsername = user.displayUsername;
-//   const email = user.email;
-//   const avatar = user.avatar;
-
-//   console.log(user.avatar)
-
-// }
-// })
+  window.addEventListener('load', (event) => {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        const uid = user.uid;
+        const ref = database
+          .ref('/users/' + uid)
+          .once('value')
+          .then(function (snapshot) {
+            const userData = snapshot.val();
+            const avatar = userData.avatar;
+            document.querySelector('#returnedAvatar').src = avatar;
+          });
+      }
+    });
+  });
   // --------> Sing Out <---------
 const signOutBtn = document.querySelector('.fa-sign-out')
 

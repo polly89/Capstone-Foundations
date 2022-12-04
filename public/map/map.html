@@ -14,14 +14,19 @@
          <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
     </head>
-    <body>
+    <body class="mini">
         <header>
             <div  class="w-3padding w3-xlarge w3-text-white">
                 <a href="/index.html"><i class="fa fa-home"></i></a>
                 <i class="fa fa-sign-out" style="font-size:24px"></i> 
             </div>     
         </header>  
-        <img id="returnedAvatar" src="">  
+        <div>
+         <img id="returnedAvatar" src=""> 
+         <div class="marker"></div>   
+         <span class="beacon"></span> 
+        </div>
+        
             <script type="module" src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
             <script type="module" src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
             <script type="module" src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
