@@ -229,22 +229,83 @@ if(saveAvatar){
     html2canvas(document.querySelector('.avatar')) 
 
     .then(canvas => {
-    let savedAvatar = canvas.toDataURL()
+    const savedAvatar = canvas.toDataURL()
     console.log(savedAvatar)
-        const database_ref = database.ref()
-        let user_data = {
-        avatar: 'saveAvatar',
-        lastLogin: Date.now()
-      }
-        
-    database_ref.child('users/' + user.uid).push().key()
-    
+
+    const user = auth.currentUser;
+    const user_data = {
+            avatar: savedAvatar.toString(),
+            lastLogin: Date.now(),
+    }
+    database.ref().child('users/' + user.uid)
+    .update(user_data)
+    .then(function (){
+            alert('Avatar creado');
+            window.location.href = '/public/map/map.html'
+          })
+          .catch(function (error){
+            console.log(error);
+          });
+     })
+    .catch(function (error){
+      const errorCode = error.code;
+         const errorMessage = error.message;
+         alert(errorMessage, errorCode)
+    })
     document.querySelector('.avatar').classList.remove('savedAvatar')
-    auth.signOut().then(function() {
-      console.log('Signed Out');
+})
+}
+
+// ---------------------> Sign Out <---------------------------
+const signOutBtn = document.querySelector('.fa-sign-out')
+
+if(signOutBtn){
+  signOutBtn.addEventListener('click', (e)=> {
+    e.preventDefault();
+    console.log('sign out button clicked');
+
+    auth
+      .signOut()
+      .then(function() {
+        console.log('Signed Out');
     }, function(error) {
       console.error('Sign Out Error', error);
     });
-})
-})
+  })
 }
+// // ------------------> Display Avatar on Map -- [POST MVP] <--------------------
+// const displayAvatar = document.querySelector('#returnedAvatar')
+
+// window.addEventListener("load", (event) => {
+//   console.log("page is fully loaded");
+
+//   const dbRef = firebase.database().ref();
+//   dbRef.child('users/').child(user.uid).get().then((snapshot) => {
+//     if (snapshot.exists()) {
+//       console.log(snapshot.val());
+//     } else {
+//       console.log("No data available");
+//     }
+//   }).catch((error) => {
+//     console.error(error);
+//   });
+  
+// });
+
+// Option 2 Syntax
+// const displayAvatar = document.querySelector('#returnedAvatar')
+
+// window.addEventListener("load", (event) => {
+//   console.log("page is fully loaded");
+
+// const user = firebase.auth().currentUser;
+// if (user !== null) {
+//   // The user object has basic properties such as display name, email, etc.
+//   const displayUsername = user.displayUsername;
+//   const email = user.email;
+//   const avatar = user.avatar;
+
+//   console.log(user.avatar)
+
+// }
+// })
