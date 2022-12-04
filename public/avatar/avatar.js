@@ -46,6 +46,7 @@ const armDefault = document.querySelector('#armsDefault')
 let currentSelection = ''
 // JS to make the selections appear:
     // #1 BODY
+    if(bodySelect){
     bodySelect.addEventListener('click', () => {
       // Changes background color to show the category selected. 
       bodySelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/selectedBodDisplay.png"
@@ -63,8 +64,10 @@ let currentSelection = ''
         
         currentSelection = 'body'
 })
+}
 // #2 LEGS
-    legSelect.addEventListener('click', () => {
+    if(legSelect){
+     legSelect.addEventListener('click', () => {
       // Changes background color to show the category selected. 
       legSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/selectedLegsDisplay.png"
       // Displays the options within that category.
@@ -76,14 +79,16 @@ let currentSelection = ''
       bodySelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/body-display.png"
       headSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/head-diplay.png"
       mouthSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/head-diplay.png"
-      mouthSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/mouth-display.png"
       armSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/arms-display.png"
       eyeSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/eyes-display.png"
       
       currentSelection = 'legs'
-    })
+    }) 
+    }
+    
     // #3 ARMS
-    armSelect.addEventListener('click', () => {
+    if(armSelect){
+     armSelect.addEventListener('click', () => {
       armSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/arms.png"
 
       cont1.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/arm-selection-1.png"
@@ -94,15 +99,17 @@ let currentSelection = ''
       bodySelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/body-display.png"
       headSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/head-diplay.png"
       mouthSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/head-diplay.png"
-      mouthSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/mouth-display.png"
       eyeSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/eyes-display.png"
       legSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/legs-display.png"
 
       currentSelection = 'arms'
-    })
+    }) 
+    }
+    
 
     // #4 HEAD
-    headSelect.addEventListener('click', () => {
+    if(headSelect){
+      headSelect.addEventListener('click', () => {
       headSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/head.png"
       cont1.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/head-selection-1.png"
       cont2.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/head-selection-2.png"
@@ -117,8 +124,11 @@ let currentSelection = ''
 
       currentSelection = 'head'
     })
+    }
+    
     // #5 EYES
-    eyeSelect.addEventListener('click', () => {
+    if(eyeSelect){
+     eyeSelect.addEventListener('click', () => {
       eyeSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/selectedEyesDisplay.png"
       cont1.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/eye-selection-1.png"
       cont2.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/eye-selection-2.png"
@@ -132,9 +142,12 @@ let currentSelection = ''
       armSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/arms-display.png"
 
       currentSelection = 'eye'
-    })
+    }) 
+    }
+    
      // #6 MOUTH
-    mouthSelect.addEventListener('click', () => {
+     if(mouthSelect){
+      mouthSelect.addEventListener('click', () => {
       mouthSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/selectedMouthDisplay.png"
       cont1.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/mouth-selection-1.png"
       cont2.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/mouth-selection-2.png"
@@ -148,7 +161,9 @@ let currentSelection = ''
       eyeSelect.src = "https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/eyes-display.png"
 
       currentSelection = 'mouth'
-    })
+      })
+     }
+    
             // Display selection and adjust location if needed. 
                 cont1.addEventListener('click', () =>{
                   if(currentSelection === 'body'){
@@ -268,44 +283,9 @@ if(signOutBtn){
       .signOut()
       .then(function() {
         console.log('Signed Out');
+        window.location.href = '/index.html'
     }, function(error) {
       console.error('Sign Out Error', error);
     });
   })
 }
-// // ------------------> Display Avatar on Map -- [POST MVP] <--------------------
-// const displayAvatar = document.querySelector('#returnedAvatar')
-
-// window.addEventListener("load", (event) => {
-//   console.log("page is fully loaded");
-
-//   const dbRef = firebase.database().ref();
-//   dbRef.child('users/').child(user.uid).get().then((snapshot) => {
-//     if (snapshot.exists()) {
-//       console.log(snapshot.val());
-//     } else {
-//       console.log("No data available");
-//     }
-//   }).catch((error) => {
-//     console.error(error);
-//   });
-  
-// });
-
-// Option 2 Syntax
-// const displayAvatar = document.querySelector('#returnedAvatar')
-
-// window.addEventListener("load", (event) => {
-//   console.log("page is fully loaded");
-
-// const user = firebase.auth().currentUser;
-// if (user !== null) {
-//   // The user object has basic properties such as display name, email, etc.
-//   const displayUsername = user.displayUsername;
-//   const email = user.email;
-//   const avatar = user.avatar;
-
-//   console.log(user.avatar)
-
-// }
-// })

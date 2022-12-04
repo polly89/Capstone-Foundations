@@ -1,8 +1,17 @@
 html { 
-    background: url(map.png); 
+    background: url(map.png) no-repeat; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    margin-left:vh
+    margin-left:2vw;
   }
+  @media only screen and (max-width: 800px) {
+    html{
+        background: url(https://myawsbucketmundoimages.s3.us-east-2.amazonaws.com/13+Pro+-+1.png) no-repeat; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+}

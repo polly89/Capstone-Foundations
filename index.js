@@ -158,3 +158,27 @@ if (signInButton) {
     });
   });
 }
+// -----------------> Reset Password <--------------------
+const forgotPassword = document.getElementById('resetBtn');
+
+if(forgotPassword){
+
+  forgotPassword.addEventListener('click', (e)=> {
+    e.preventDefault();
+    console.log('reset clicked')
+
+    const resetEmail = document.getElementById('user-email').value;
+
+    firebase.auth().sendPasswordResetEmail(resetEmail)
+    .then(() => {
+    // Password reset email sent!
+    // ..
+     })
+    .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.log(errorCode, errorMessage)
+  });
+  })
+  
+}
